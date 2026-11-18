@@ -31,7 +31,7 @@ Bảng từ `02_error_list_v1.csv`: **issue / ảnh khác nhau**, không cộng 
 
 Máy bỏ dòng hỏng/ID sai/box rỗng/trùng, cắt box tràn, chuẩn hóa lớp; log trước–sau ở `03_fixes.csv`. Không bịa nhãn cho 6 ảnh thiếu file. QC vòng 1 trên 205 ảnh: 36 lỗi bắt buộc, 153 cảnh báo; 35 thao tác máy, còn 6 lỗi thiếu nhãn.
 
-Hàng đợi 125 ảnh, duyệt 80/125, còn 45 ảnh. `img_0020` đứng đầu: 11,524 điểm do bỏ dòng + nghi thiếu/nhầm lớp; tiếp theo `img_0031/0053/0126/0135`, NEEDS_LABEL 10 điểm/ảnh. Điểm cộng trọng số × confidence; lỗi ngữ nghĩa cần người vì model có thể sai. Đã xem 74 ảnh chứa 94 nghi vấn ngữ nghĩa (51 thiếu, 18 nhầm, 13 thừa, 12 lỏng), không đồng nghĩa 94 lỗi thật (`evidence/review_coverage.json`).
+Hàng đợi 125 ảnh, duyệt 80/125, còn 45 ảnh. `img_0020` đứng đầu: 11,524 điểm do bỏ dòng + nghi thiếu/nhầm lớp; tiếp theo `img_0031/0053/0126/0135`, NEEDS_LABEL 10 điểm/ảnh. Điểm hàng đợi là tổng trọng số × (1 + confidence) của cảnh báo, cộng trọng số các thao tác sửa/NEEDS_LABEL; lỗi ngữ nghĩa cần người vì model có thể sai. Đã xem 74 ảnh chứa 94 nghi vấn ngữ nghĩa (51 thiếu, 18 nhầm, 13 thừa, 12 lỏng), không đồng nghĩa 94 lỗi thật (`evidence/review_coverage.json`).
 
 ## 3. Calibration hai ngưỡng
 Sweep trên 39 ảnh calib, không dùng test để chọn ngưỡng. Các số P/R dưới đây lấy từ `calibration/calibration.json`.
