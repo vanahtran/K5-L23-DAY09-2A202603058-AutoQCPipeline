@@ -1,0 +1,72 @@
+check,severity,code,image,line,message,extra
+missing_labels,warn,EMPTY_LABEL,img_0013,,file nhãn rỗng: ảnh nền hay thiếu nhãn?,
+missing_labels,warn,EMPTY_LABEL,img_0097,,file nhãn rỗng: ảnh nền hay thiếu nhãn?,
+missing_labels,warn,EMPTY_LABEL,img_0129,,file nhãn rỗng: ảnh nền hay thiếu nhãn?,
+missing_labels,warn,EMPTY_LABEL,img_0192,,file nhãn rỗng: ảnh nền hay thiếu nhãn?,
+label_format,warn,BOX_HUGE,img_0018,1,Box phủ gần hết ảnh,
+label_format,warn,BOX_TINY,img_0026,6,Cạnh ngắn của box dưới ngưỡng pixel,
+label_format,warn,BOX_TINY,img_0051,5,Cạnh ngắn của box dưới ngưỡng pixel,
+label_format,warn,BOX_TINY,img_0069,2,Cạnh ngắn của box dưới ngưỡng pixel,
+label_format,warn,BOX_HUGE,img_0128,1,Box phủ gần hết ảnh,
+label_format,warn,BOX_TINY,img_0161,2,Cạnh ngắn của box dưới ngưỡng pixel,
+label_format,warn,BOX_TINY,img_0161,3,Cạnh ngắn của box dưới ngưỡng pixel,
+label_format,warn,BOX_TINY,img_0161,4,Cạnh ngắn của box dưới ngưỡng pixel,
+label_format,warn,BOX_TINY,img_0183,11,Cạnh ngắn của box dưới ngưỡng pixel,
+label_format,warn,BOX_HUGE,img_0196,1,Box phủ gần hết ảnh,
+second_opinion,warn,POSSIBLE_FALSE_POS,img_0014,2,Không có dự đoán model khớp box nhãn; cần người xem,"{""iou"": 0.1450117456567434}"
+second_opinion,warn,POSSIBLE_LOOSE_BOX,img_0015,,Nhãn khác dự đoán model; cần người xác nhận,"{""conf"": 0.8941, ""iou"": 0.3434455934432383}"
+second_opinion,warn,POSSIBLE_LOOSE_BOX,img_0018,,Nhãn khác dự đoán model; cần người xác nhận,"{""conf"": 0.7195, ""iou"": 0.4470426447819693}"
+second_opinion,warn,POSSIBLE_LOOSE_BOX,img_0021,,Nhãn khác dự đoán model; cần người xác nhận,"{""conf"": 0.8362, ""iou"": 0.4859935892263159}"
+second_opinion,warn,POSSIBLE_FALSE_POS,img_0022,2,Không có dự đoán model khớp box nhãn; cần người xem,"{""iou"": 0.0}"
+second_opinion,warn,POSSIBLE_MISSING,img_0032,,Nhãn khác dự đoán model; cần người xác nhận,"{""conf"": 0.608, ""iou"": 0}"
+second_opinion,warn,POSSIBLE_FALSE_POS,img_0035,2,Không có dự đoán model khớp box nhãn; cần người xem,"{""iou"": 0.0}"
+second_opinion,warn,POSSIBLE_LOOSE_BOX,img_0036,,Nhãn khác dự đoán model; cần người xác nhận,"{""conf"": 0.8733, ""iou"": 0.42652477076992373}"
+second_opinion,warn,POSSIBLE_LOOSE_BOX,img_0038,,Nhãn khác dự đoán model; cần người xác nhận,"{""conf"": 0.9212, ""iou"": 0.39748903279274156}"
+second_opinion,warn,POSSIBLE_LOOSE_BOX,img_0045,,Nhãn khác dự đoán model; cần người xác nhận,"{""conf"": 0.7519, ""iou"": 0.33476178349319957}"
+second_opinion,warn,POSSIBLE_LOOSE_BOX,img_0046,,Nhãn khác dự đoán model; cần người xác nhận,"{""conf"": 0.8928, ""iou"": 0.3823233906495968}"
+second_opinion,warn,POSSIBLE_LOOSE_BOX,img_0054,,Nhãn khác dự đoán model; cần người xác nhận,"{""conf"": 0.7403, ""iou"": 0.37880261832775625}"
+second_opinion,warn,POSSIBLE_LOOSE_BOX,img_0058,,Nhãn khác dự đoán model; cần người xác nhận,"{""conf"": 0.7285, ""iou"": 0.4534370760405646}"
+second_opinion,warn,POSSIBLE_MISSING,img_0062,,Nhãn khác dự đoán model; cần người xác nhận,"{""conf"": 0.6374, ""iou"": 0}"
+second_opinion,warn,POSSIBLE_LOOSE_BOX,img_0064,,Nhãn khác dự đoán model; cần người xác nhận,"{""conf"": 0.9147, ""iou"": 0.45010497657783627}"
+second_opinion,warn,POSSIBLE_FALSE_POS,img_0068,8,Không có dự đoán model khớp box nhãn; cần người xem,"{""iou"": 0.19889536171485311}"
+second_opinion,warn,POSSIBLE_FALSE_POS,img_0069,2,Không có dự đoán model khớp box nhãn; cần người xem,"{""iou"": 0.0}"
+second_opinion,warn,POSSIBLE_FALSE_POS,img_0075,6,Không có dự đoán model khớp box nhãn; cần người xem,"{""iou"": 0.10672083058763539}"
+second_opinion,warn,POSSIBLE_LOOSE_BOX,img_0077,,Nhãn khác dự đoán model; cần người xác nhận,"{""conf"": 0.7352, ""iou"": 0.4016279290671218}"
+second_opinion,warn,POSSIBLE_WRONG_CLASS,img_0078,,Nhãn khác dự đoán model; cần người xác nhận,"{""conf"": 0.8287, ""iou"": 0.9189310218686991}"
+second_opinion,warn,POSSIBLE_LOOSE_BOX,img_0082,,Nhãn khác dự đoán model; cần người xác nhận,"{""conf"": 0.8085, ""iou"": 0.4834327463044831}"
+second_opinion,warn,POSSIBLE_WRONG_CLASS,img_0083,,Nhãn khác dự đoán model; cần người xác nhận,"{""conf"": 0.6948, ""iou"": 0.9738458397765963}"
+second_opinion,warn,POSSIBLE_LOOSE_BOX,img_0090,,Nhãn khác dự đoán model; cần người xác nhận,"{""conf"": 0.7153, ""iou"": 0.4628350771458936}"
+second_opinion,warn,POSSIBLE_FALSE_POS,img_0091,7,Không có dự đoán model khớp box nhãn; cần người xem,"{""iou"": 0.25691703662875975}"
+second_opinion,warn,POSSIBLE_FALSE_POS,img_0093,3,Không có dự đoán model khớp box nhãn; cần người xem,"{""iou"": 0.0}"
+second_opinion,warn,POSSIBLE_FALSE_POS,img_0095,6,Không có dự đoán model khớp box nhãn; cần người xem,"{""iou"": 0.0}"
+second_opinion,warn,POSSIBLE_LOOSE_BOX,img_0099,,Nhãn khác dự đoán model; cần người xác nhận,"{""conf"": 0.6892, ""iou"": 0.302285320050106}"
+second_opinion,warn,POSSIBLE_FALSE_POS,img_0111,2,Không có dự đoán model khớp box nhãn; cần người xem,"{""iou"": 0.0}"
+second_opinion,warn,POSSIBLE_LOOSE_BOX,img_0119,,Nhãn khác dự đoán model; cần người xác nhận,"{""conf"": 0.706, ""iou"": 0.40835910199990577}"
+second_opinion,warn,POSSIBLE_MISSING,img_0121,,Nhãn khác dự đoán model; cần người xác nhận,"{""conf"": 0.7641, ""iou"": 0}"
+second_opinion,warn,POSSIBLE_FALSE_POS,img_0124,8,Không có dự đoán model khớp box nhãn; cần người xem,"{""iou"": 0.03620175556397309}"
+second_opinion,warn,POSSIBLE_LOOSE_BOX,img_0125,,Nhãn khác dự đoán model; cần người xác nhận,"{""conf"": 0.8328, ""iou"": 0.42099341975298876}"
+second_opinion,warn,POSSIBLE_MISSING,img_0126,,Nhãn khác dự đoán model; cần người xác nhận,"{""conf"": 0.7174, ""iou"": 0}"
+second_opinion,warn,POSSIBLE_MISSING,img_0127,,Nhãn khác dự đoán model; cần người xác nhận,"{""conf"": 0.6843, ""iou"": 0}"
+second_opinion,warn,POSSIBLE_MISSING,img_0127,,Nhãn khác dự đoán model; cần người xác nhận,"{""conf"": 0.6298, ""iou"": 0}"
+second_opinion,warn,POSSIBLE_FALSE_POS,img_0131,11,Không có dự đoán model khớp box nhãn; cần người xem,"{""iou"": 0.0}"
+second_opinion,warn,POSSIBLE_FALSE_POS,img_0134,5,Không có dự đoán model khớp box nhãn; cần người xem,"{""iou"": 0.04389868101983441}"
+second_opinion,warn,POSSIBLE_MISSING,img_0135,,Nhãn khác dự đoán model; cần người xác nhận,"{""conf"": 0.7297, ""iou"": 0}"
+second_opinion,warn,POSSIBLE_LOOSE_BOX,img_0142,,Nhãn khác dự đoán model; cần người xác nhận,"{""conf"": 0.658, ""iou"": 0.42779459598869807}"
+second_opinion,warn,POSSIBLE_FALSE_POS,img_0149,3,Không có dự đoán model khớp box nhãn; cần người xem,"{""iou"": 0.0}"
+second_opinion,warn,POSSIBLE_FALSE_POS,img_0150,3,Không có dự đoán model khớp box nhãn; cần người xem,"{""iou"": 0.23162072486516988}"
+second_opinion,warn,POSSIBLE_MISSING,img_0159,,Nhãn khác dự đoán model; cần người xác nhận,"{""conf"": 0.6658, ""iou"": 0}"
+second_opinion,warn,POSSIBLE_MISSING,img_0160,,Nhãn khác dự đoán model; cần người xác nhận,"{""conf"": 0.7768, ""iou"": 0}"
+second_opinion,warn,POSSIBLE_LOOSE_BOX,img_0175,,Nhãn khác dự đoán model; cần người xác nhận,"{""conf"": 0.8997, ""iou"": 0.4215077681105207}"
+second_opinion,warn,POSSIBLE_FALSE_POS,img_0177,2,Không có dự đoán model khớp box nhãn; cần người xem,"{""iou"": 0.0}"
+second_opinion,warn,POSSIBLE_FALSE_POS,img_0180,5,Không có dự đoán model khớp box nhãn; cần người xem,"{""iou"": 0.0}"
+second_opinion,warn,POSSIBLE_MISSING,img_0183,,Nhãn khác dự đoán model; cần người xác nhận,"{""conf"": 0.8104, ""iou"": 0}"
+second_opinion,warn,POSSIBLE_FALSE_POS,img_0189,4,Không có dự đoán model khớp box nhãn; cần người xem,"{""iou"": 0.00916243131024922}"
+second_opinion,warn,POSSIBLE_FALSE_POS,img_0191,1,Không có dự đoán model khớp box nhãn; cần người xem,"{""iou"": 0.25644187130435536}"
+second_opinion,warn,POSSIBLE_MISSING,img_0199,,Nhãn khác dự đoán model; cần người xác nhận,"{""conf"": 0.7376, ""iou"": 0}"
+second_opinion,warn,POSSIBLE_LOOSE_BOX,img_0200,,Nhãn khác dự đoán model; cần người xác nhận,"{""conf"": 0.6911, ""iou"": 0.43446286020480024}"
+second_opinion,warn,POSSIBLE_FALSE_POS,img_0206,1,Không có dự đoán model khớp box nhãn; cần người xem,"{""iou"": 0.10827808564215993}"
+second_opinion,warn,POSSIBLE_MISSING,img_0210,,Nhãn khác dự đoán model; cần người xác nhận,"{""conf"": 0.6665, ""iou"": 0}"
+second_opinion,warn,POSSIBLE_LOOSE_BOX,img_0212,,Nhãn khác dự đoán model; cần người xác nhận,"{""conf"": 0.6733, ""iou"": 0.3285078952560335}"
+second_opinion,warn,POSSIBLE_FALSE_POS,img_0212,4,Không có dự đoán model khớp box nhãn; cần người xem,"{""iou"": 0.15014265209152355}"
+second_opinion,warn,POSSIBLE_WRONG_CLASS,img_0220,,Nhãn khác dự đoán model; cần người xác nhận,"{""conf"": 0.7077, ""iou"": 0.9106244643380735}"
+second_opinion,warn,POSSIBLE_MISSING,img_0220,,Nhãn khác dự đoán model; cần người xác nhận,"{""conf"": 0.625, ""iou"": 0}"

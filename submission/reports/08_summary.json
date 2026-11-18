@@ -1,0 +1,18 @@
+{
+  "verdict": {
+    "decision": "Hold",
+    "n_errors": 0,
+    "n_warn_images": 38,
+    "n_images": 205,
+    "warn_ratio": 0.1854,
+    "reasons": [
+      "Còn 38/205 ảnh cảnh báo chưa duyệt (18.54%), đạt ngưỡng 10.00%."
+    ]
+  },
+  "reviewed": 80,
+  "budget": 80,
+  "seconds": 3.5,
+  "exported": "/Users/trananhvan/Documents/AI_Lv2_day1/K5-L23-DAY09-2A202603058-AutoQCPipeline/submission/export/clean_v1",
+  "config_sha1": "de421209560fc2a606e7d588063966623b40babb",
+  "review_sim_sha1": "7988ca22827f780a7043a2300490e679a1697154"
+}

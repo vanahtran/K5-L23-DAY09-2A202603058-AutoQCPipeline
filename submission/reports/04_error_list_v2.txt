@@ -1,0 +1,171 @@
+# Danh sách lỗi — SAU sửa tự động (v2)
+ảnh đã quét: 205
+
+label_format -> 10 dòng
+missing_labels -> 21 dòng
+second_opinion -> 123 dòng
+
+[ERROR] MISSING_LABEL_FILE   img_0031  ảnh không có file nhãn
+[ERROR] MISSING_LABEL_FILE   img_0053  ảnh không có file nhãn
+[ERROR] MISSING_LABEL_FILE   img_0126  ảnh không có file nhãn
+[ERROR] MISSING_LABEL_FILE   img_0135  ảnh không có file nhãn
+[ERROR] MISSING_LABEL_FILE   img_0170  ảnh không có file nhãn
+[ERROR] MISSING_LABEL_FILE   img_0219  ảnh không có file nhãn
+[WARN ] BOX_HUGE             img_0018.txt:1  Box phủ gần hết ảnh
+[WARN ] BOX_HUGE             img_0128.txt:1  Box phủ gần hết ảnh
+[WARN ] BOX_HUGE             img_0196.txt:1  Box phủ gần hết ảnh
+[WARN ] BOX_TINY             img_0026.txt:6  Cạnh ngắn của box dưới ngưỡng pixel
+[WARN ] BOX_TINY             img_0030.txt:9  Cạnh ngắn của box dưới ngưỡng pixel
+[WARN ] BOX_TINY             img_0051.txt:5  Cạnh ngắn của box dưới ngưỡng pixel
+[WARN ] BOX_TINY             img_0069.txt:2  Cạnh ngắn của box dưới ngưỡng pixel
+[WARN ] BOX_TINY             img_0161.txt:2  Cạnh ngắn của box dưới ngưỡng pixel
+[WARN ] BOX_TINY             img_0161.txt:3  Cạnh ngắn của box dưới ngưỡng pixel
+[WARN ] BOX_TINY             img_0161.txt:4  Cạnh ngắn của box dưới ngưỡng pixel
+[WARN ] EMPTY_LABEL          img_0004  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+[WARN ] EMPTY_LABEL          img_0013  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+[WARN ] EMPTY_LABEL          img_0050  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+[WARN ] EMPTY_LABEL          img_0057  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+[WARN ] EMPTY_LABEL          img_0065  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+[WARN ] EMPTY_LABEL          img_0097  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+[WARN ] EMPTY_LABEL          img_0103  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+[WARN ] EMPTY_LABEL          img_0104  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+[WARN ] EMPTY_LABEL          img_0129  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+[WARN ] EMPTY_LABEL          img_0147  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+[WARN ] EMPTY_LABEL          img_0157  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+[WARN ] EMPTY_LABEL          img_0178  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+[WARN ] EMPTY_LABEL          img_0184  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+[WARN ] EMPTY_LABEL          img_0192  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+[WARN ] EMPTY_LABEL          img_0194  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+[WARN ] POSSIBLE_FALSE_POS   img_0024.txt:7  Không có dự đoán model khớp box nhãn; cần người xem
+[WARN ] POSSIBLE_FALSE_POS   img_0030.txt:9  Không có dự đoán model khớp box nhãn; cần người xem
+[WARN ] POSSIBLE_FALSE_POS   img_0035.txt:2  Không có dự đoán model khớp box nhãn; cần người xem
+[WARN ] POSSIBLE_FALSE_POS   img_0068.txt:7  Không có dự đoán model khớp box nhãn; cần người xem
+[WARN ] POSSIBLE_FALSE_POS   img_0069.txt:2  Không có dự đoán model khớp box nhãn; cần người xem
+[WARN ] POSSIBLE_FALSE_POS   img_0070.txt:6  Không có dự đoán model khớp box nhãn; cần người xem
+[WARN ] POSSIBLE_FALSE_POS   img_0078.txt:2  Không có dự đoán model khớp box nhãn; cần người xem
+[WARN ] POSSIBLE_FALSE_POS   img_0091.txt:7  Không có dự đoán model khớp box nhãn; cần người xem
+[WARN ] POSSIBLE_FALSE_POS   img_0092.txt:9  Không có dự đoán model khớp box nhãn; cần người xem
+[WARN ] POSSIBLE_FALSE_POS   img_0095.txt:6  Không có dự đoán model khớp box nhãn; cần người xem
+[WARN ] POSSIBLE_FALSE_POS   img_0099.txt:14  Không có dự đoán model khớp box nhãn; cần người xem
+[WARN ] POSSIBLE_FALSE_POS   img_0100.txt:4  Không có dự đoán model khớp box nhãn; cần người xem
+[WARN ] POSSIBLE_FALSE_POS   img_0111.txt:2  Không có dự đoán model khớp box nhãn; cần người xem
+[WARN ] POSSIBLE_FALSE_POS   img_0144.txt:1  Không có dự đoán model khớp box nhãn; cần người xem
+[WARN ] POSSIBLE_FALSE_POS   img_0149.txt:3  Không có dự đoán model khớp box nhãn; cần người xem
+[WARN ] POSSIBLE_FALSE_POS   img_0150.txt:3  Không có dự đoán model khớp box nhãn; cần người xem
+[WARN ] POSSIBLE_FALSE_POS   img_0155.txt:2  Không có dự đoán model khớp box nhãn; cần người xem
+[WARN ] POSSIBLE_FALSE_POS   img_0155.txt:3  Không có dự đoán model khớp box nhãn; cần người xem
+[WARN ] POSSIBLE_FALSE_POS   img_0177.txt:2  Không có dự đoán model khớp box nhãn; cần người xem
+[WARN ] POSSIBLE_FALSE_POS   img_0180.txt:5  Không có dự đoán model khớp box nhãn; cần người xem
+[WARN ] POSSIBLE_FALSE_POS   img_0189.txt:4  Không có dự đoán model khớp box nhãn; cần người xem
+[WARN ] POSSIBLE_FALSE_POS   img_0193.txt:6  Không có dự đoán model khớp box nhãn; cần người xem
+[WARN ] POSSIBLE_FALSE_POS   img_0204.txt:1  Không có dự đoán model khớp box nhãn; cần người xem
+[WARN ] POSSIBLE_FALSE_POS   img_0206.txt:1  Không có dự đoán model khớp box nhãn; cần người xem
+[WARN ] POSSIBLE_LOOSE_BOX   img_0015  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_LOOSE_BOX   img_0018  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_LOOSE_BOX   img_0036  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_LOOSE_BOX   img_0038  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_LOOSE_BOX   img_0045  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_LOOSE_BOX   img_0046  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_LOOSE_BOX   img_0054  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_LOOSE_BOX   img_0062  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_LOOSE_BOX   img_0062  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_LOOSE_BOX   img_0064  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_LOOSE_BOX   img_0077  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_LOOSE_BOX   img_0082  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_LOOSE_BOX   img_0090  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_LOOSE_BOX   img_0094  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_LOOSE_BOX   img_0096  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_LOOSE_BOX   img_0119  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_LOOSE_BOX   img_0125  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_LOOSE_BOX   img_0127  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_LOOSE_BOX   img_0127  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_LOOSE_BOX   img_0131  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_LOOSE_BOX   img_0142  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_LOOSE_BOX   img_0171  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_LOOSE_BOX   img_0171  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_LOOSE_BOX   img_0175  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_LOOSE_BOX   img_0179  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_LOOSE_BOX   img_0200  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_LOOSE_BOX   img_0217  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_LOOSE_BOX   img_0217  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_MISSING     img_0001  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_MISSING     img_0004  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_MISSING     img_0004  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_MISSING     img_0012  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_MISSING     img_0014  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_MISSING     img_0020  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_MISSING     img_0022  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_MISSING     img_0028  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_MISSING     img_0030  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_MISSING     img_0032  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_MISSING     img_0047  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_MISSING     img_0050  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_MISSING     img_0057  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_MISSING     img_0058  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_MISSING     img_0065  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_MISSING     img_0066  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_MISSING     img_0067  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_MISSING     img_0068  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_MISSING     img_0078  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_MISSING     img_0086  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_MISSING     img_0092  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_MISSING     img_0093  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_MISSING     img_0096  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_MISSING     img_0099  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_MISSING     img_0100  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_MISSING     img_0103  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_MISSING     img_0104  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_MISSING     img_0116  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_MISSING     img_0117  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_MISSING     img_0121  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_MISSING     img_0127  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_MISSING     img_0131  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_MISSING     img_0134  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_MISSING     img_0144  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_MISSING     img_0145  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_MISSING     img_0147  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_MISSING     img_0151  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_MISSING     img_0157  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_MISSING     img_0159  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_MISSING     img_0160  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_MISSING     img_0164  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_MISSING     img_0165  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_MISSING     img_0178  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_MISSING     img_0184  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_MISSING     img_0187  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_MISSING     img_0194  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_MISSING     img_0199  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_MISSING     img_0204  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_MISSING     img_0210  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_MISSING     img_0211  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_MISSING     img_0215  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_MISSING     img_0218  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_MISSING     img_0220  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_WRONG_CLASS img_0019  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_WRONG_CLASS img_0020  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_WRONG_CLASS img_0021  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_WRONG_CLASS img_0034  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_WRONG_CLASS img_0037  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_WRONG_CLASS img_0070  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_WRONG_CLASS img_0071  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_WRONG_CLASS img_0075  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_WRONG_CLASS img_0083  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_WRONG_CLASS img_0112  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_WRONG_CLASS img_0124  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_WRONG_CLASS img_0160  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_WRONG_CLASS img_0183  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_WRONG_CLASS img_0185  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_WRONG_CLASS img_0191  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_WRONG_CLASS img_0202  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_WRONG_CLASS img_0208  Nhãn khác dự đoán model; cần người xác nhận
+[WARN ] POSSIBLE_WRONG_CLASS img_0212  Nhãn khác dự đoán model; cần người xác nhận
+
+## Tổng hợp theo mã
+error MISSING_LABEL_FILE     6
+warn  BOX_HUGE               3
+warn  BOX_TINY               7
+warn  EMPTY_LABEL            15
+warn  POSSIBLE_FALSE_POS     24
+warn  POSSIBLE_LOOSE_BOX     28
+warn  POSSIBLE_MISSING       53
+warn  POSSIBLE_WRONG_CLASS   18
