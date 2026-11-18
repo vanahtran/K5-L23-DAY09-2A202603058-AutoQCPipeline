@@ -27,7 +27,8 @@ Bẫy cần nghĩ tới (có test cho từng cái)
 
 Gợi ý: `yaml.safe_load / safe_dump`.
 """
-from collections import defaultdict  # noqa: F401
+from collections import defaultdict
+from pathlib import Path
 
 import yaml  # noqa: F401
 
@@ -35,5 +36,71 @@ from ..common import ERROR, parse_yolo_line  # noqa: F401
 
 
 def fix(ds, issues, cfg):
-    # TODO
-    raise NotImplementedError("autofix chưa làm")
+    """Gom lỗi theo file/dòng gốc; xóa thắng cắt và mỗi thay đổi có log."""
+    if ds.root.resolve() == (Path(__file__).resolve().parents[2] / "data" / "raw").resolve():
+        raise ValueError("Chỉ sửa bản sao dataset, không sửa dữ liệu gốc")
+    errors = [i for i in issues if i.severity == ERROR]
+    changes = []
+    def log(image, line, action, before, after):
+        changes.append(dict(image=image, line=line, action=action, before=before, after=after))
+    remove = {i.image for i in errors if i.code.startswith("DUP_IMAGE_") or i.code in {"LEAK_TEST", "CORRUPT_IMAGE", "BAD_SIZE"}}
+    for stem in sorted(remove):
+        image = ds.image_path(stem)
+        label = ds.label_path(stem)
+        if image is not None:
+            before = image.name
+            image.unlink()
+            if label.exists():
+                label.unlink()
+            log(stem, None, "remove_image", before, "(đã loại ảnh và nhãn)")
+    if any(i.code == "BAD_CLASS_NAME" for i in errors):
+        data = yaml.safe_load(ds.yaml_path.read_text(encoding="utf-8")) if ds.yaml_path.exists() else {}
+        data = data or {}
+        if data.get("names") != cfg["classes"]:
+            before = str(data.get("names"))
+            data["names"] = list(cfg["classes"])
+            ds.yaml_path.write_text(yaml.safe_dump(data, allow_unicode=True, sort_keys=False), encoding="utf-8")
+            log("data.yaml", None, "rename_classes", before, str(data["names"]))
+    grouped = defaultdict(lambda: defaultdict(set))
+    missing = set()
+    for issue in errors:
+        if issue.image in remove:
+            continue
+        if issue.code == "MISSING_LABEL_FILE":
+            missing.add(issue.image)
+        elif issue.line is not None:
+            grouped[issue.image][issue.line].add(issue.code)
+    for stem in sorted(missing):
+        if ds.image_path(stem) is not None and not ds.label_path(stem).exists():
+            log(stem, None, "needs_label", "(không có file)", "chuyển người gán")
+    drop_codes = {"BAD_FORMAT", "BAD_CLASS_ID", "BOX_ZERO", "DUP_BOX"}
+    for stem, by_line in sorted(grouped.items()):
+        path = ds.label_path(stem)
+        if not path.exists():
+            continue
+        output, changed = [], False
+        for number, text in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
+            codes = by_line.get(number, set())
+            after, action = text, None
+            if codes & drop_codes:
+                after, action = None, "drop_line"
+            elif "BOX_OUT_OF_IMAGE" in codes:
+                try:
+                    cls, x, y, w, h = parse_yolo_line(text)
+                    left, top = max(0., x - w / 2), max(0., y - h / 2)
+                    right, bottom = min(1., x + w / 2), min(1., y + h / 2)
+                    if right <= left or bottom <= top:
+                        after, action = None, "drop_line"
+                    elif (left, top, right, bottom) != (x - w / 2, y - h / 2, x + w / 2, y + h / 2):
+                        after = f"{cls} {(left + right)/2:.10f} {(top + bottom)/2:.10f} {right-left:.10f} {bottom-top:.10f}"
+                        action = "clip_box"
+                except (ValueError, OverflowError):
+                    after, action = None, "drop_line"
+            if action:
+                changed = True
+                log(stem, number, action, text, after or "")
+            if after is not None:
+                output.append(after)
+        if changed:
+            path.write_text("\n".join(output) + ("\n" if output else ""), encoding="utf-8")
+    return changes
