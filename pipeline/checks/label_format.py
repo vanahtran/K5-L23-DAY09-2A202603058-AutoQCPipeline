@@ -25,5 +25,36 @@ from ..common import ERROR, WARN, Issue, iou_xywh, parse_yolo_line  # noqa: F401
 
 
 def run(ds, cfg):
-    # TODO: duyệt từng file nhãn, từng dòng
-    raise NotImplementedError("check label_format chưa làm")
+    """Kiểm từng dòng độc lập, giữ số dòng gốc và lấy ngưỡng từ cấu hình."""
+    opts = cfg["label_format"]
+    issues = []
+    for path in ds.label_files():
+        stem = path.stem
+        previous = []
+        size = ds.image_size(stem)
+        for line, text in ds.read_label_lines(stem) or []:
+            def emit(code, severity, message, **extra):
+                issues.append(Issue("label_format", severity, code, stem, message, line, extra))
+            try:
+                box = parse_yolo_line(text)
+            except (ValueError, OverflowError) as exc:
+                emit("BAD_FORMAT", ERROR, str(exc))
+                continue
+            cls, x, y, w, h = box
+            if not 0 <= cls < len(ds.classes):
+                emit("BAD_CLASS_ID", ERROR, f"ID lớp {cls} ngoài danh sách lớp")
+                continue
+            if w <= 0 or h <= 0:
+                emit("BOX_ZERO", ERROR, "Chiều rộng hoặc cao không dương")
+                continue
+            overflow = max(0, w / 2 - x, h / 2 - y, x + w / 2 - 1, y + h / 2 - 1)
+            if overflow > opts["overflow_tol"]:
+                emit("BOX_OUT_OF_IMAGE", ERROR, f"Box tràn {overflow:.6f}", overflow=overflow)
+            if any(cls == old[0] and iou_xywh(box[1:], old[1:]) > opts["dup_box_iou"] for old in previous):
+                emit("DUP_BOX", ERROR, "Box trùng với dòng trước cùng lớp")
+            previous.append(box)
+            if size and min(w * size[0], h * size[1]) < opts["min_box_px"]:
+                emit("BOX_TINY", WARN, "Cạnh ngắn của box dưới ngưỡng pixel")
+            if w * h > opts["max_box_frac"]:
+                emit("BOX_HUGE", WARN, "Box phủ gần hết ảnh")
+    return issues
