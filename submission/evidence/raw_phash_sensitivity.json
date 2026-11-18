@@ -1,0 +1,9 @@
+{
+  "n_images": 224,
+  "flagged_duplicate_or_leak_images": {
+    "2": 14,
+    "4": 14,
+    "16": 26,
+    "20": 134
+  }
+}

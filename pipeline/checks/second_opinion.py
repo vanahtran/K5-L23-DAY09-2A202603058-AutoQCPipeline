@@ -52,7 +52,14 @@ def run(ds, cfg, preds=None):
         size = ds.image_size(stem)
         if size is None:
             continue
-        labels = ds.valid_boxes(stem)
+        labels = []
+        for _, text in lines:
+            try:
+                box = parse_yolo_line(text)
+            except (ValueError, OverflowError):
+                continue
+            if 0 <= box[0] < len(ds.classes):
+                labels.append(box)
         all_preds = preds[stem]
         for pred in all_preds:
             cls, conf, x, y, w, h = pred

@@ -1,0 +1,12 @@
+{
+  "queue_images": 125,
+  "reviewed_images": 80,
+  "semantic_warning_images_reviewed": 74,
+  "semantic_warning_issues_reviewed": 94,
+  "by_code": {
+    "POSSIBLE_MISSING": 51,
+    "POSSIBLE_WRONG_CLASS": 18,
+    "POSSIBLE_FALSE_POS": 13,
+    "POSSIBLE_LOOSE_BOX": 12
+  }
+}
